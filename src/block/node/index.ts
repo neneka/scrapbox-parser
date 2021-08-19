@@ -14,6 +14,7 @@ import { GoogleMapNodeParser } from "./GoogleMapNode";
 import { InternalLinkNodeParser } from "./InternalLinkNode";
 import { IconNodeParser } from "./IconNode";
 import { HashTagNodeParser } from "./HashTagNode";
+import { TwitterNodeParser } from "./TwitterNode";
 import { PlainNodeParser } from "./PlainNode";
 
 import type { Node } from "./type";
@@ -48,6 +49,7 @@ const combineNodeParsers =
     )();
 
 export const convertToNodes = combineNodeParsers(
+  TwitterNodeParser,
   FalsyEliminator,
   QuoteNodeParser,
   HelpfeelNodeParser,
@@ -64,5 +66,5 @@ export const convertToNodes = combineNodeParsers(
   IconNodeParser,
   GoogleMapNodeParser,
   InternalLinkNodeParser,
-  HashTagNodeParser
+  HashTagNodeParser,
 );

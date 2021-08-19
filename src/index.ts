@@ -27,6 +27,7 @@ export type {
   GoogleMapNode,
   IconNode,
   HashTagNode,
+  TwitterNode,
   PlainNode,
 } from "./block/node/type";
 export type { Decoration } from "./block/node/DecorationNode";

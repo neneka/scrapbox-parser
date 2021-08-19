@@ -91,6 +91,11 @@ export interface HashTagNode extends BaseNode {
   href: string;
 }
 
+export interface TwitterNode extends BaseNode {
+  type: "twitter";
+  id: string;
+}
+
 export interface PlainNode extends BaseNode {
   type: "plain";
   text: string;
@@ -112,4 +117,5 @@ export type Node =
   | GoogleMapNode
   | IconNode
   | HashTagNode
+  | TwitterNode
   | PlainNode;
